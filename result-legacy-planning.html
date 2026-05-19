@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DHC21792BX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DHC21792BX');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KCVW7GJH');</script>
+<!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legacy Planning | Lion Global Investors</title>
+
+  <!-- Open Graph Title -->
+  <meta property="og:title" content="Legacy Planning | Lion Global Investors">
+
+  <!-- Optional: Specify the type of content -->
+  <meta property="og:type" content="website">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="prefetch" href="pic/loading.gif">
+  <link rel="prefetch" href="pic/results-anim.gif">
+  <link rel="prefetch" href="results/default_map.jpg">
+
+  <link rel="prefetch" href="results/capital_breakdown.jpg">
+  <link rel="prefetch" href="results/wealth_breakdown.jpg">
+  <link rel="prefetch" href="results/income_breakdown.jpg">
+  <link rel="prefetch" href="results/legacy_breakdown.jpg">
+
+  <link rel="prefetch" href="results/legacy1.jpg">
+  <link rel="prefetch" href="results/legacy2.jpg">
+  <link rel="prefetch" href="results/legacy3.jpg">
+
+</head>
+
+<body onload="Transition()">
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCVW7GJH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="centerWrapper" class="center-wrapper">
+    <section class="uk-container uk-container-small">
+      <div class="uk-card uk-card-default uk-card-body">
+        <img id="result-anim" src="pic/results-anim.gif" alt="Animation" class="uk-width-1-1 cover-img"
+          style="display: none;">
+        <div id="plane-button" class="lets-fly-info">
+          <a href="#" class="next-button-link">
+            <img class="next-button">
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <div class="ans-wrapper">
+    <div class="uk-container uk-container-small">
+      <div class="uk-card uk-card-default uk-card-body quiz-ans-card">
+
+        <div class="ans-banner-container">
+          
+          <p class="result-text">
+
+            Here is your traveller's profile. <br>
+            Don't lose it. Save the image!
+
+          </p>
+          
+          <img id="random-result" class="main-img ans-banner-img" alt="Legacy Planning">
+          
+          <img id="result-img" class="main-img ans-banner-img" src="results/legacy.jpg" alt="Legacy Planning" usemap="#retirementMap">
+
+          <!-- <img id="random-result" class="main-img ans-banner-img" alt="Legacy Planning"> -->
+
+          <!-- <map name="retirementMap">
+            <area shape="poly" coords="56,1642,272,1584,342,1505,462,1505,575,1475,673,1489,763,1521,844,1523,882,1563,570,1602,497,1623,322,1602" title="" onclick="Capital()">
+
+            <area shape="poly" coords="70,1657,224,1582,310,1475,356,1377,374,1302,281,1275,167,1328,81,1447,58,1508" title="" onclick="Wealth()">
+
+            <area shape="poly" coords="376,1451,401,1349,438,1273,485,1228,533,1229,589,1282,647,1339,640,1388,581,1412,475,1457" title="" onclick="Income()">
+
+            <area shape="poly" coords="935,1587,910,1531,852,1502,800,1497,767,1502,709,1481,678,1464,663,1418,678,1363,674,1320,725,1305,778,1280,829,
+            1294,877,1347,928,1394,973,1394,1021,1389,1040,1597" title="" onclick="Legacy()">
+
+          </map> -->
+
+          <map name="retirementMap">
+            <area shape="poly" coords="188,608,296,543,342,478,400,460,507,464,602,418,665,436,768,487,868,486,929,529,954,569,890,563,821,558,567,625,302,591,134,644" title="" onclick="Capital()">
+
+            <area shape="poly" coords="80,584,69,441,155,302,245,259,317,250,393,278,360,422,267,529,93,650" title="" onclick="Wealth()">
+
+            <area shape="poly" coords="379,437,403,304,462,215,521,192,584,212,675,298,676,347,674,417,588,397,497,447" title="" onclick="Income()">
+
+            <area shape="poly" coords="705,305,752,298,786,270,843,282,885,330,931,370,980,389,1033,378,1048,561,967,555,924,487,802,464,707,437,685,393" title="" onclick="Legacy()">
+
+          </map>
+
+          <div class="image-btn">
+            <!-- to fund centre -->
+            <a href="https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Legacy%20Planning" id="legacyFunds" target="_blank">
+
+              <button class="fundCentre-button">
+                Click here to view related funds >
+              </button>
+            </a>
+            
+          </div>
+          
+        </div>
+
+        <p class="disclaimer" id="disclaimer">This is for information and illustration only, and does not have regard to your specific investment objectives, financial situation, tax position or needs. The information herein is not intended to be and does not constitute financial advice or an offer or solicitation for the purchase or sale of units in any fund. Not all investment ideas are suitable for all investors and no recommendation is given as to the suitability of any funds for any particular investor. Prior to making any investment, you should make your own evaluation or seek independent advice as to whether such investment is suitable for you. Lion Global Investors does not accept any liability for any damages or loss, including loss of profit, whether direct, indirect, economic or consequential, arising from reliance on any information, opinion or estimate herein.</p>
+        
+        <p class="spacer"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="imageMapResizer.min.js"></script>
+   <script>
+
+    function fixImageMap() {
+        imageMapResize();
+    }
+
+    window.addEventListener("load", fixImageMap);
+    window.addEventListener("resize", fixImageMap);
+
+    // Trigger fixImageMap on clicking an image by id or class name
+    document.addEventListener("click", function (event) {
+      // Check if the clicked element has the specific id or class
+      if (event.target.id === 'result-img') {
+          fixImageMap();
+      }
+    });
+
+   </script>
+
+</body>
+
+<footer>
+
+    <div id="footer-buttons" class="sticky-bar">
+
+      <a id="downloadImage" class="share-links instagram learnMore-button">
+
+        Save
+        
+      </a>
+
+      <!-- share game url -->
+      <a id="shareURL" class="replay-button"> 
+
+        Share
+
+      </a>
+
+    </div>
+</footer>
+
+</html>
+
+<script>
+  var finalPic = ' ';
+  var selectedPic = null;
+
+  var images = [
+    { main: 'results/legacy_reviews1.jpg', linked: 'results/save/legacy_reviews1.jpg' },
+    { main: 'results/legacy_reviews2.jpg', linked: 'results/save/legacy_reviews2.jpg' },
+    { main: 'results/legacy_reviews3.jpg', linked: 'results/save/legacy_reviews3.jpg' }
+  ];
+
+  document.getElementById("disclaimer").style.display = 'none';
+  document.getElementById('footer-buttons').style.display = 'none';
+
+  document.getElementById('result-anim').style.display = 'block';
+
+function Transition() {
+  setTimeout(() => {
+    document.getElementById('result-anim').style.display = 'none';
+    document.getElementById('centerWrapper').style.display = 'none';
+
+    const ansWrapper = document.querySelector('.ans-wrapper');
+    ansWrapper.style.display = 'flex';
+    ansWrapper.style.justifyContent = 'center';
+    ansWrapper.style.alignItems = 'flex-start';
+    document.getElementById('disclaimer').style.display = 'block';
+    document.getElementById('footer-buttons').style.display = 'block';
+    document.getElementById('capitalFunds').style.display = 'block';
+  }, 3000);
+}
+
+// document.getElementById("shareResult").addEventListener("click", async (event) => {
+//     event.preventDefault();
+
+//     const mainImage = document.getElementById('random-result');
+
+//     const images = [
+//       { main: 'results/capital_reviews1.jpg', linked: 'results/capital1.jpg' },
+//       { main: 'results/capital_reviews2.jpg', linked: 'results/capital2.jpg' },
+//       { main: 'results/capital_reviews3.jpg', linked: 'results/capital3.jpg' }
+//     ];
+
+//     function isFacebookApp() {
+//       return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+//     }
+
+//     if (isFacebookApp()) {
+//       // Facebook-specific logic: Open share link in a new tab
+//       const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareMessage)}`;
+//       window.open(facebookShareUrl, '_blank');
+
+//       return;
+//     }
+//     else {
+//       // sharing of image to application of choice
+//       if (mainImage && mainImage.getAttribute('src')) {
+
+//         const mainImageSrc = mainImage.src.split('/').pop();
+
+//         const matchedImage = images.find(img => img.main.endsWith(mainImageSrc));
+
+//         if (!matchedImage) {
+//           alert ('Could not find corresponding image');
+//           return;
+//         }
+
+//         const URL_Linked = new URL(matchedImage.linked, window.location.href).href;
+
+//         try {
+//           const response = await fetch(URL_Linked);
+//           const blob = await response.blob();
+
+//           const fileName = URL_Linked.split('/').pop();
+
+//           const file = new File([blob], fileName, {type: blob.type});
+
+//           const shareData = {
+//             files: [file],
+//             text: `https://lionglobalinvestors.github.io/Retirement/`,
+//             url: `https://lionglobalinvestors.github.io/Retirement/`,
+//           };
+
+//           if (navigator.canShare && navigator.canShare(shareData)) {
+//           await navigator.share(shareData);
+//           } else {
+//             alert(`navigator.share doesn't support in your device`);
+//           }
+//         } catch (error) {
+//           return;
+//         }
+
+//       }
+//     }
+    
+//   });
+
+function choosePic() {
+    var imgElement = document.getElementById('random-result');
+    if (imgElement) {
+
+      var randomNum = Math.floor(Math.random() * images.length);
+      var selectedPic = images[randomNum];
+
+      imgElement.src = selectedPic.main;
+      finalPic = selectedPic.linked;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    choosePic();
+
+    document.getElementById('downloadImage').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+
+      if (!finalPic) {
+        console.error("No image selected!");
+        return;
+      }
+
+      const link = document.createElement("a");
+      link.href = finalPic;
+      link.download = finalPic.split('/').pop(); // Extract file name
+      document.body.appendChild(link);
+      link.click(); // Trigger download
+      document.body.removeChild(link); // Clean up
+    });
+  });
+
+document.getElementById("shareURL").addEventListener("click", async (event) => {
+    event.preventDefault(); // prevent default <a> behavior
+
+    const shareMessage = `I am a Chope Chief traveller. What's yours? Find out your Traveller Profile here: https://lionglobalinvestors.github.io/Retirement/`;
+
+    try {
+      await navigator.clipboard.writeText(shareMessage);
+      alert("URL copied to clipboard!");
+    } catch (err) {
+      console.error("Clipboard copy failed", err);
+      alert("Failed to copy URL to clipboard.");
+    }
+});
+
+function Capital(){
+  document.getElementById('result-img').src = "results/legacy_capital.jpg";
+
+  document.getElementById('legacyFunds').href = "https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Capital%20Preservation";
+}
+
+
+function Wealth(){
+  document.getElementById('result-img').src = "results/legacy_wealth.jpg";
+
+  document.getElementById('legacyFunds').href = "https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Wealth%20Accumulation";
+}
+
+function Income(){
+  document.getElementById('result-img').src = "results/legacy_income.jpg";
+
+  document.getElementById('legacyFunds').href = "https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Income%20Generation";
+}
+
+function Legacy(){
+  document.getElementById('result-img').src = "results/legacy.jpg";
+
+  document.getElementById('legacyFunds').href = "https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Legacy%20Planning";
+}
+
+</script>

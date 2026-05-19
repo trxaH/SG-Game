@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHC21792BX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DHC21792BX');
+</script> -->
+
+<!-- Google Tag Manager -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KCVW7GJH');</script> -->
+<!-- End Google Tag Manager -->
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Critic | Lion Global Investors</title>
+
+  <!-- Open Graph Title -->
+  <meta property="og:title" content="Restaurant Critic  | Lion Global Investors">
+
+  <!-- Optional: Specify the type of content -->
+  <meta property="og:type" content="website">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="prefetch" href="pic/loading.gif">
+  <link rel="prefetch" href="pic/results-anim.gif">
+
+  <link rel="prefetch" href="results/capital1.jpg">
+  <link rel="prefetch" href="results/capital2.jpg">
+  <link rel="prefetch" href="results/capital3.jpg">
+
+  <meta property="og:description" content="Here's my Traveller Profile! What's yours?" />
+  <meta property="og:image" content="https://lionglobalinvestors.github.io/Gamification/pic/start.jpg" />
+  <meta property="og:url" content="https://lionglobalinvestors.github.io/Gamification/index.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Facebook SDK -->
+  <script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</head>
+
+<body onload="Transition()">
+
+  <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCVW7GJH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="centerWrapper" class="center-wrapper">
+    <section class="uk-container uk-container-small">
+      <div class="uk-card uk-card-default uk-card-body">
+        <img id="result-anim" src="pic/results-anim.gif" alt="Animation" class="uk-width-1-1 cover-img"
+          style="display: none;">
+      </div>
+    </section>
+  </div>
+  
+  <div class="ans-wrapper">
+    <div class="uk-container uk-container-small">
+      <div class="uk-card uk-card-default uk-card-body quiz-ans-card">
+
+        <div class="ans-banner-container">
+          
+          <p class="result-text">
+
+            Here is your profile. <br>
+            Don't lose it. Save the image!
+
+          </p>
+
+          <!-- <img id="random-result" class="main-img ans-banner-img" alt="Restaurant Critic"> -->
+
+          <img id="result-img" class="main-img" src="results/restaurant_critic.jpg" alt="Restaurant Critic">
+
+          <!-- <img id="random-result" class="main-img ans-banner-img" alt="Capital Preservation"> -->
+
+          <img id="linked-result">
+
+
+          <div class="image-btn">
+            <!-- to fund centre -->
+            <a href="https://www.lionglobalinvestors.com/en/fund-centre.html?&retire_goals=Capital%20Preservation" id="capitalFunds" target="_blank">
+              <button class="fundCentre-button">
+                Click here to view related funds >
+              </button>
+              
+            </a>
+
+        </div>
+          
+        </div>
+
+        <p class="disclaimer" id="disclaimer">This is for information and illustration only, and does not have regard to your specific investment objectives, financial situation, tax position or needs. The information herein is not intended to be and does not constitute financial advice or an offer or solicitation for the purchase or sale of units in any fund. Not all investment ideas are suitable for all investors and no recommendation is given as to the suitability of any funds for any particular investor. Prior to making any investment, you should make your own evaluation or seek independent advice as to whether such investment is suitable for you. Lion Global Investors does not accept any liability for any damages or loss, including loss of profit, whether direct, indirect, economic or consequential, arising from reliance on any information, opinion or estimate herein.</p>
+        
+        <p class="spacer"></p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<footer>
+
+    <div id="footer-buttons" class="sticky-bar">
+
+      <a id="downloadImage" class="share-links instagram learnMore-button">
+
+        Save
+
+      </a>
+
+      <!-- share game url -->
+      <a id="shareURL" class="replay-button"> 
+
+        Share
+
+      </a>
+
+    </div>
+</footer>
+
+</html>
+
+<script>
+  // var finalPic = ' ';
+  // var selectedPic = null;
+
+  // var images = [
+  //   { main: 'results/capital_reviews1.jpg', linked: 'results/save/capital_reviews1.jpg' },
+  //   { main: 'results/capital_reviews2.jpg', linked: 'results/save/capital_reviews2.jpg' },
+  //   { main: 'results/capital_reviews3.jpg', linked: 'results/save/capital_reviews3.jpg' }
+  // ];
+
+  document.getElementById("disclaimer").style.display = 'none';
+  document.getElementById('footer-buttons').style.display = 'none';
+
+  document.getElementById('result-anim').style.display = 'block';
+
+function Transition() {
+  setTimeout(() => {
+    document.getElementById('result-anim').style.display = 'none';
+    document.getElementById('centerWrapper').style.display = 'none';
+
+    const ansWrapper = document.querySelector('.ans-wrapper');
+    ansWrapper.style.display = 'flex';
+    ansWrapper.style.justifyContent = 'center';
+    ansWrapper.style.alignItems = 'flex-start';
+    document.getElementById('disclaimer').style.display = 'block';
+    document.getElementById('footer-buttons').style.display = 'block';
+    document.getElementById('capitalFunds').style.display = 'block';
+  }, 3000);
+}
+
+async function generateShareURL() {
+  if (!finalPic) {
+    console.error("No image selected!");
+    return;
+  }
+
+  try {
+    const response = await fetch(finalPic);
+    const blob = await response.blob();
+
+    const formData = new FormData();
+    formData.append("file", blob);
+    formData.append("upload_preset", "results");
+    formData.append("folder", "traveller-profiles");
+
+    const uploadRes = await fetch("https://api.cloudinary.com/v1_1/dd2663add/image/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await uploadRes.json();
+    const imageUrl = data.secure_url;
+
+    // Save the image URL to reuse in all share links
+    currentShareURL = imageUrl;
+
+  } catch (err) {
+    console.error("Failed to generate share URL", err);
+  }
+}
+
+// function choosePic() {
+//     var imgElement = document.getElementById('random-result');
+//     if (imgElement) {
+
+//       var randomNum = Math.floor(Math.random() * images.length);
+//       var selectedPic = images[randomNum];
+
+//       imgElement.src = selectedPic.main;
+//       finalPic = selectedPic.linked;
+//     }
+//   }
+
+document.addEventListener("DOMContentLoaded", function () {
+    choosePic();
+
+    document.getElementById('downloadImage').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+
+      if (!finalPic) {
+        console.error("No image selected!");
+        return;
+      }
+
+      const link = document.createElement("a");
+      link.href = finalPic;
+      link.download = finalPic.split('/').pop(); // Extract file name
+      document.body.appendChild(link);
+      link.click(); // Trigger download
+      document.body.removeChild(link); // Clean up
+    });
+  });
+
+  document.getElementById("shareURL").addEventListener("click", async (event) => {
+    event.preventDefault(); // prevent default <a> behavior
+
+    const shareMessage = `I am a ABC Diner. What's yours? Find out your Diner Profile here: https://lionglobalinvestors.github.io/SG-Campaign-Gamification/`;
+
+    try {
+      await navigator.clipboard.writeText(shareMessage);
+      alert("URL copied to clipboard!");
+    } catch (err) {
+      console.error("Clipboard copy failed", err);
+      alert("Failed to copy URL to clipboard.");
+    }
+});
+
+</script>

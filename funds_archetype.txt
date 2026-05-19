@@ -1,0 +1,25 @@
+LionGlobal Singapore Trust Fund - Restaurant Critic / Omakase Daredevil
+Lion-OCBC Securities Singapore Low Carbon ETF - Food Blogger / TBC
+LionGlobal Singapore Dividend Equity Fund - The Regular / Adventurous Foodie
+LionGlobal Singapore Physical Gold Fund* - OG Lover / Classic Lover
+LionGlobal Short Duration Bond Fund* - Menu Planner / TBC
+LionGlobal Money Market Fund - Picky Eater / Comfort Craver
+
+pre-written caption:
+I'm a ABC (archetype). What's yours? Find out your profile here: <link>
+
+Least Risk: +1
+Low Risk: +2
+Moderate Risk: +3
+High Risk: +4
+
+8 - 11: MMF | SDBF
+12 - 13: SDBF | MMF
+14 - 15: SDBF | Gold
+16 - 17: Gold | SDBF
+18 - 19: Gold | Div EQ
+20 - 21: Div EQ | Gold
+22 - 23: Div EQ | SLC
+24 - 25: SLC | Div EQ
+26 - 27: SLC | Trust
+28 - 32: Trust | SLC
