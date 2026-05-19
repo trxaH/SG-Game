@@ -95,28 +95,41 @@ class Quiz {
     ].map((v, i) => ({ ...v, id: i + 1 }));
 
     //change this to point system
+    // this.RESULT = [
+    //   {
+    //     url: "result-capital-preservation.html",
+    //     format: "CAPITAL PRESERVATION",
+    //   },
+    //   {
+    //     url: "result-wealth-accumulation.html",
+    //     format: "WEALTH ACCUMULATION",
+    //   },
+    //   {
+    //     url: "result-income-generation.html",
+    //     format: "INCOME GENERATION",
+    //   },
+    //   {
+    //     url: "result-legacy-planning.html",
+    //     format: "LEGACY PLANNING",
+    //   },
+    // ].map((v, i) => ({
+    //   ...v,
+    //   id: i + 1,
+    //   formatCheck: v.format,
+    // }));
+
     this.RESULT = [
-      {
-        url: "result-LeastRisk-preservation.html",
-        format: "LeastRisk PRESERVATION",
-      },
-      {
-        url: "result-HighRisk-accumulation.html",
-        format: "HighRisk ACCUMULATION",
-      },
-      {
-        url: "result-ModerateRisk-generation.html",
-        format: "ModerateRisk GENERATION",
-      },
-      {
-        url: "result-LowRisk-planning.html",
-        format: "LowRisk PLANNING",
-      },
-    ].map((v, i) => ({
-      ...v,
-      id: i + 1,
-      formatCheck: v.format,
-    }));
+      { min: 8,  max: 11, url: "result-picky-eater.html" }, // MMF | SDBF
+      { min: 12, max: 13, url: "result-menu-planner1.html" }, // SDBF | MMF
+      { min: 14, max: 15, url: "result-menu-planner2.html" }, // SDBF | Gold
+      { min: 16, max: 17, url: "result-classic-lover.html" }, // Gold | SDBF
+      { min: 18, max: 19, url: "result-restaurant-critic.html" }, // Gold | DivEQ
+      { min: 20, max: 21, url: "result-adventurous-foodie1.html" }, // DivEQ | Gold
+      { min: 22, max: 23, url: "result-adventurous-foodie2.html" }, // DivEQ | SLC
+      { min: 24, max: 25, url: "result-SLC-DivEQ.html" }, // SLC | DivEQ
+      { min: 26, max: 27, url: "result-SLC-Trust.html" }, // SLC | Trust
+      { min: 28, max: 32, url: "result-Trust-SLC.html" } // Trust | SLC
+    ]
 
     this.currentQuizID = 1;
     this.userAnswers = new Array();
@@ -134,7 +147,7 @@ class Quiz {
     console.log(quizID + ", " + this.currentQuizID)
     if (quizID && !isNaN(quizID)) {
       const quizData = this.QUIZ.find((v) => v.id === quizID);
-      const isLastQuiz = quizID >= this.QUIZ.length-1;
+      const isLastQuiz = quizID >= this.QUIZ.length;
 
       if (quizData) {
         document.title = `LionGlobal Signature Singapore Suite Quiz | Lion Global Investors`;
@@ -209,22 +222,53 @@ class Quiz {
     }
   }
 
-
   showResult() {
     console.log("showResult => userAnswers -", this.userAnswers);
+
+    const scoreMap = {
+      LeastRisk: 1,
+      LowRisk: 2,
+      ModerateRisk: 3,
+      HighRisk: 4
+    };
+
+    // calculate total score
+    const totalScore = this.userAnswers.reduce((sum, item) => {
+      return sum + scoreMap[item.answer];
+    }, 0);
+
+    console.log("Total Score:", totalScore);
+
+    // find matching result range
+    const result = this.RESULT.find(r =>
+      totalScore >= r.min && totalScore <= r.max
+    );
+
+    if (result) {
+      console.log("Redirecting to:", result.url);
+      location.href = result.url;
+    } else {
+      console.error("No matching result found for score:", totalScore);
+    }
+    
+  }
+
+
+  // showResult() {
+  //   console.log("showResult => userAnswers -", this.userAnswers);
   
-    if (this.userAnswers && this.userAnswers.length) {
-      const counts = this.userAnswers.reduce((acc, { answer }) => {
-        acc[answer] = (acc[answer] || 0) + 1;
-        return acc;
-      }, {});
+  //   if (this.userAnswers && this.userAnswers.length) {
+  //     const counts = this.userAnswers.reduce((acc, { answer }) => {
+  //       acc[answer] = (acc[answer] || 0) + 1;
+  //       return acc;
+  //     }, {});
   
-      const maxCount = Math.max(...Object.values(counts));
-      const dominantCategories = Object.keys(counts).filter(
-        (key) => counts[key] === maxCount
-      );
+  //     const maxCount = Math.max(...Object.values(counts));
+  //     const dominantCategories = Object.keys(counts).filter(
+  //       (key) => counts[key] === maxCount
+  //     );
   
-      console.log("Dominant Categories:", dominantCategories);
+  //     console.log("Dominant Categories:", dominantCategories);
   
       // let dominantCategory;
   
@@ -308,26 +352,26 @@ class Quiz {
       //     console.error("No matching result found.");
       //   }
       // }
-    }
-  }  
+  //   }
+  // }  
   
-  processResult(dominantCategory) {
-    if (!dominantCategory) {
-      console.error("No dominant category provided to processResult.");
-      return;
-    }
+  // processResult(dominantCategory) {
+  //   if (!dominantCategory) {
+  //     console.error("No dominant category provided to processResult.");
+  //     return;
+  //   }
 
-    const resultData = this.RESULT.find(
-      (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
-    );
+  //   const resultData = this.RESULT.find(
+  //     (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
+  //   );
 
-    if (resultData) {
-      console.log("Processing Result:", resultData);
-      location.href = resultData.url;
-    } else {
-      console.error("No matching result found for the category:", dominantCategory);
-    }
-  }
+  //   if (resultData) {
+  //     console.log("Processing Result:", resultData);
+  //     location.href = resultData.url;
+  //   } else {
+  //     console.error("No matching result found for the category:", dominantCategory);
+  //   }
+  // }
 
 }
 
@@ -344,29 +388,9 @@ function prefetchImages(folderPath, fileNames) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const imageFiles = [
-    "answers.png",
-    "boarding_pass.png",
-    "capital.jpg",
-    "departure.gif",
-    "income.jpg",
-    "landing.gif",
-    "legacy.jpg",
-    "pilot.jpg",
-    "quiz-Q1.jpg",
-    "quiz-Q2.jpg",
-    "quiz-Q3.jpg",
-    "quiz-Q4.jpg",
-    "quiz-Q5.jpg",
-    "quiz-Q6.jpg",
-    "quiz-Q7.jpg",
-    "quiz-Q8.jpg",
-    "quiz-Q9.jpg",
-    "results-anim.gif",
-    "Retirement Map.png",
-    "start.jpg",
-    "transition_1.jpg",
-    "transition_2.jpg",
-    "wealth.jpg"
+    // "answers.png",
+    // "boarding_pass.png",
+
   ];
   prefetchImages('/pic/', imageFiles);
   const quiz = new Quiz();

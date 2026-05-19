@@ -23,3 +23,8 @@ High Risk: +4
 24 - 25: SLC | Div EQ
 26 - 27: SLC | Trust
 28 - 32: Trust | SLC
+
+check which archetype is tied to which result tier
+
+do up mock pages of each result + link to website
+add in mock game art 

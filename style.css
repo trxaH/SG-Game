@@ -31,10 +31,10 @@
     transform: translate(0%, 0%);
 }
 
-.lets-fly-info {
+/* .lets-fly-info {
     padding-left: 15px;
     padding-right: 15px;
-}
+} */
 
 .start-button {
     font-family: 'Arial', sans-serif;
@@ -412,22 +412,6 @@
     width: 33.3%;
 }
 
-.capital-img {
-    background-image: url('pic/capital.png');
-}
-
-.wealth-img {
-    background-image: url('pic/wealth.png');
-}
-
-.income-img {
-    background-image: url('pic/income.png');
-}
-
-.legacy-img {
-    background-image: url('pic/legacy.png');
-}
-
 .quiz-ans-content {
     background-color: #000000;
     padding-left: 15px;
@@ -632,44 +616,27 @@ footer a {
 }
 
 .image-btn {
-    width: -webkit-fill-available; /* Full screen width */
+    /* width: -webkit-fill-available; /* Full screen width
 
     display: flex;
     align-items: center;
     justify-content: left;
-    left: 12vw;
+    left: 12vw; */
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 8%;
+    z-index: 3;
+
 }
 
-.boarding-pass-image {
-    position: fixed;
-    bottom: -100%; /* Start off-screen */
-    left: 58%;
-    transform: translateX(-50%);
-    /* height: 800px; */
-    height: 730px;
-    transition: transform 1s ease-in-out, bottom 1s ease-in-out;
-    z-index: 3;
-  }
-  
-  /* Final position after the slide-up animation */
-  .boarding-pass-image.animate {
-    bottom: 17.5%; /* Adjust this to control how far up the image slides */
-    /* left: 50%; */
-  }
-
-  .transition2{
-    position: absolute !important;
-    /* top: 76.2% !important; */
-    z-index: 2;
-  }
-
   .fundCentre-button {
-    font-family: 'Arial', sans-serif;
+    /* font-family: 'Arial', sans-serif;
     font-size: 14px;
     position: absolute;
     text-decoration: none;
     text-align: left;
-    /* left: 2.1vw; */
     bottom: 6.5vw;
     height: 30px;
     width: 215px;
@@ -678,7 +645,39 @@ footer a {
     color: #FFFFFF;
     background-color: #c4306d;
 
+    border: none; */
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 8px 2px;
+    border-radius: 24px;
     border: none;
+    color: white;
+    background: #c4306d;
+    cursor: pointer;
+    min-width: 220px;
+
+  }
+
+  .second-button {
+    background:#89264f;
+  }
+
+  .btn-one, .btn-two {
+    position: absolute;
+    left: 62%;
+    transform: translateX(-50%);
+  }
+
+  /*desktop */
+  .btn-one {
+    /* right: 6%; */
+    bottom: 370px;
+  }
+
+  .btn-two {
+    /* right: 6%; */
+    top: 30px;
   }
 
 
@@ -956,6 +955,26 @@ footer a {
     /* .disclaimer {
         font-size: 11px;
     } */
+
+    .image-btn{
+        bottom: 8%;
+    }
+
+    .btn-one{
+        /* left: 5%; */
+        /* bottom: 55px; */
+        bottom: 200px;
+    }
+
+    .btn-two{
+        /* right: 5%; */
+        top: 15px;
+    }
+
+    .fundCentre-button{
+        min-width: 170px;
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 959px) {
@@ -1101,6 +1120,26 @@ footer a {
         left: 4.5vw;
         width: auto;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .image-btn{
+        bottom: 10%;
+    }
+
+    .btn-one {
+        bottom: 65px;
+    }
+
+    .btn-two {
+        bottom: 0;
+    }
+
+    .fundCentre-button{
+        width: 240px;
+        font-size: 16px;
     }
 }
 

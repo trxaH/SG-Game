@@ -39,7 +39,7 @@
   <link rel="prefetch" href="pic/results-anim.gif">
 
   <link rel="prefetch" href="results/result5.png">
-  <link rel="prefetch" href="results/critic.png">
+  <link rel="prefetch" href="results/foodie.png">
 
   <meta property="og:description" content="Here's my Traveller Profile! What's yours?" />
   <!-- <meta property="og:image" content="https://lionglobalinvestors.github.io/SG-Gamification/pic/start.jpg" /> -->
@@ -84,7 +84,7 @@
 
           <!-- <img id="random-result" class="main-img ans-banner-img" alt="Restaurant Critic"> -->
 
-          <img id="result-img" class="main-img" src="results/critic.png" alt="Restaurant Critic">
+          <img id="result-img" class="main-img" src="results/foodie.png" alt="Restaurant Critic">
 
           <img id="result-img" class="main-img" src="results/result5.png" alt="Gold DivEQ">
 
@@ -152,7 +152,7 @@
 </html>
 
 <script>
-  var finalPic = 'results/critic.png';
+  var finalPic = 'results/foodie.png';
   // var selectedPic = null;
 
   // var images = [
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("shareURL").addEventListener("click", async (event) => {
     event.preventDefault(); // prevent default <a> behavior
 
-    const shareMessage = `I am a Restaurant Critic. What's yours? Find out your Diner Profile here: https://lionglobalinvestors.github.io/SG-Campaign-Gamification/`;
+    const shareMessage = `I am an Adventurous Foodie. What's yours? Find out your Diner Profile here: https://lionglobalinvestors.github.io/SG-Campaign-Gamification/`;
 
     try {
       await navigator.clipboard.writeText(shareMessage);
